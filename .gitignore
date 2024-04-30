@@ -1,0 +1,9 @@
+.vs/
+packages/
+AIDA64ToTcpIp/bin
+AIDA64ToTcpIp/obj
+AIDA64ToTcpIp_Client/bin
+AIDA64ToTcpIp_Client/obj
+AIDA64ToTcpIp_Server/bin
+AIDA64ToTcpIp_Server/obj
+Setups/Output/*.exe
