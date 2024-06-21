@@ -28,6 +28,7 @@
         /// </summary>
         private void InitializeComponent()
         {
+            this.components = new System.ComponentModel.Container();
             this.groupBox1 = new System.Windows.Forms.GroupBox();
             this.ipAddressCtrl = new IPAddressControlLib.IPAddressControl();
             this.groupBox2 = new System.Windows.Forms.GroupBox();
@@ -37,9 +38,10 @@
             this.cb_StartMinimized = new System.Windows.Forms.CheckBox();
             this.groupBox4 = new System.Windows.Forms.GroupBox();
             this.groupBox5 = new System.Windows.Forms.GroupBox();
+            this.btn_AddAidaItem = new System.Windows.Forms.Button();
             this.flp_AidaItems = new System.Windows.Forms.FlowLayoutPanel();
             this.colorDialog1 = new System.Windows.Forms.ColorDialog();
-            this.btn_AddAidaItem = new System.Windows.Forms.Button();
+            this.timerResize = new System.Windows.Forms.Timer(this.components);
             this.groupBox1.SuspendLayout();
             this.groupBox2.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.nud_Port)).BeginInit();
@@ -203,20 +205,6 @@
             this.groupBox5.TabStop = false;
             this.groupBox5.Text = "AIDA64 ID Zuordnungen (Für IDs siehe AIDA64):";
             // 
-            // flp_AidaItems
-            // 
-            this.flp_AidaItems.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
-            | System.Windows.Forms.AnchorStyles.Left) 
-            | System.Windows.Forms.AnchorStyles.Right)));
-            this.flp_AidaItems.AutoScroll = true;
-            this.flp_AidaItems.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
-            this.flp_AidaItems.FlowDirection = System.Windows.Forms.FlowDirection.TopDown;
-            this.flp_AidaItems.Location = new System.Drawing.Point(6, 19);
-            this.flp_AidaItems.Name = "flp_AidaItems";
-            this.flp_AidaItems.Size = new System.Drawing.Size(342, 155);
-            this.flp_AidaItems.TabIndex = 0;
-            this.flp_AidaItems.WrapContents = false;
-            // 
             // btn_AddAidaItem
             // 
             this.btn_AddAidaItem.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
@@ -227,6 +215,26 @@
             this.btn_AddAidaItem.Text = "+";
             this.btn_AddAidaItem.UseVisualStyleBackColor = true;
             this.btn_AddAidaItem.Click += new System.EventHandler(this.btn_AddAidaItem_Click);
+            // 
+            // flp_AidaItems
+            // 
+            this.flp_AidaItems.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
+            | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
+            this.flp_AidaItems.AutoScroll = true;
+            this.flp_AidaItems.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
+            this.flp_AidaItems.FlowDirection = System.Windows.Forms.FlowDirection.TopDown;
+            this.flp_AidaItems.Location = new System.Drawing.Point(6, 19);
+            this.flp_AidaItems.Margin = new System.Windows.Forms.Padding(0);
+            this.flp_AidaItems.Name = "flp_AidaItems";
+            this.flp_AidaItems.Size = new System.Drawing.Size(342, 155);
+            this.flp_AidaItems.TabIndex = 0;
+            this.flp_AidaItems.WrapContents = false;
+            this.flp_AidaItems.Resize += new System.EventHandler(this.flp_AidaItems_Resize);
+            // 
+            // timerResize
+            // 
+            this.timerResize.Tick += new System.EventHandler(this.timerResize_Tick);
             // 
             // FormSettings
             // 
@@ -268,5 +276,6 @@
         private System.Windows.Forms.FlowLayoutPanel flp_AidaItems;
         private System.Windows.Forms.Button btn_AddAidaItem;
         private System.Windows.Forms.ColorDialog colorDialog1;
+        private System.Windows.Forms.Timer timerResize;
     }
 }

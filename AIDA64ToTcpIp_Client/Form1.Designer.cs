@@ -32,6 +32,7 @@
             this.menuStrip1 = new System.Windows.Forms.MenuStrip();
             this.dateiToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.alleVerbindungenTrennenToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.zeigeLetzeAIDAAntwortRAWAnToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.beendenToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.einstellungenToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.einstellungenToolStripMenuItem1 = new System.Windows.Forms.ToolStripMenuItem();
@@ -41,7 +42,6 @@
             this.anzeigenToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.toolStripMenuItemCloseFromTray = new System.Windows.Forms.ToolStripMenuItem();
             this.dgv_AidaItems = new System.Windows.Forms.DataGridView();
-            this.zeigeLetzeAIDAAntwortRAWAnToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.menuStrip1.SuspendLayout();
             this.statusStrip1.SuspendLayout();
             this.cms_NotifyIcon.SuspendLayout();
@@ -55,7 +55,7 @@
             this.einstellungenToolStripMenuItem});
             this.menuStrip1.Location = new System.Drawing.Point(0, 0);
             this.menuStrip1.Name = "menuStrip1";
-            this.menuStrip1.Size = new System.Drawing.Size(601, 24);
+            this.menuStrip1.Size = new System.Drawing.Size(584, 24);
             this.menuStrip1.TabIndex = 2;
             this.menuStrip1.Text = "menuStrip1";
             // 
@@ -72,14 +72,21 @@
             // alleVerbindungenTrennenToolStripMenuItem
             // 
             this.alleVerbindungenTrennenToolStripMenuItem.Name = "alleVerbindungenTrennenToolStripMenuItem";
-            this.alleVerbindungenTrennenToolStripMenuItem.Size = new System.Drawing.Size(161, 22);
+            this.alleVerbindungenTrennenToolStripMenuItem.Size = new System.Drawing.Size(261, 22);
             this.alleVerbindungenTrennenToolStripMenuItem.Text = "Neu verbinden...";
             this.alleVerbindungenTrennenToolStripMenuItem.Click += new System.EventHandler(this.VerbindungTrennenToolStripMenuItem_Click);
+            // 
+            // zeigeLetzeAIDAAntwortRAWAnToolStripMenuItem
+            // 
+            this.zeigeLetzeAIDAAntwortRAWAnToolStripMenuItem.Name = "zeigeLetzeAIDAAntwortRAWAnToolStripMenuItem";
+            this.zeigeLetzeAIDAAntwortRAWAnToolStripMenuItem.Size = new System.Drawing.Size(261, 22);
+            this.zeigeLetzeAIDAAntwortRAWAnToolStripMenuItem.Text = "Zeige letze AIDA-Antwort RAW an...";
+            this.zeigeLetzeAIDAAntwortRAWAnToolStripMenuItem.Click += new System.EventHandler(this.zeigeLetzeAIDAAntwortRAWAnToolStripMenuItem_Click);
             // 
             // beendenToolStripMenuItem
             // 
             this.beendenToolStripMenuItem.Name = "beendenToolStripMenuItem";
-            this.beendenToolStripMenuItem.Size = new System.Drawing.Size(161, 22);
+            this.beendenToolStripMenuItem.Size = new System.Drawing.Size(261, 22);
             this.beendenToolStripMenuItem.Text = "Beenden";
             this.beendenToolStripMenuItem.Click += new System.EventHandler(this.beendenToolStripMenuItem_Click);
             // 
@@ -102,9 +109,9 @@
             // 
             this.statusStrip1.Items.AddRange(new System.Windows.Forms.ToolStripItem[] {
             this.tssl_Status});
-            this.statusStrip1.Location = new System.Drawing.Point(0, 428);
+            this.statusStrip1.Location = new System.Drawing.Point(0, 239);
             this.statusStrip1.Name = "statusStrip1";
-            this.statusStrip1.Size = new System.Drawing.Size(601, 22);
+            this.statusStrip1.Size = new System.Drawing.Size(584, 22);
             this.statusStrip1.TabIndex = 3;
             this.statusStrip1.Text = "statusStrip1";
             // 
@@ -125,14 +132,14 @@
             // anzeigenToolStripMenuItem
             // 
             this.anzeigenToolStripMenuItem.Name = "anzeigenToolStripMenuItem";
-            this.anzeigenToolStripMenuItem.Size = new System.Drawing.Size(180, 22);
+            this.anzeigenToolStripMenuItem.Size = new System.Drawing.Size(137, 22);
             this.anzeigenToolStripMenuItem.Text = "Ausblenden";
             this.anzeigenToolStripMenuItem.Click += new System.EventHandler(this.anzeigenToolStripMenuItem_Click);
             // 
             // toolStripMenuItemCloseFromTray
             // 
             this.toolStripMenuItemCloseFromTray.Name = "toolStripMenuItemCloseFromTray";
-            this.toolStripMenuItemCloseFromTray.Size = new System.Drawing.Size(180, 22);
+            this.toolStripMenuItemCloseFromTray.Size = new System.Drawing.Size(137, 22);
             this.toolStripMenuItemCloseFromTray.Text = "Beenden";
             this.toolStripMenuItemCloseFromTray.Click += new System.EventHandler(this.toolStripMenuItemCloseFromTray_Click);
             // 
@@ -146,24 +153,18 @@
             this.dgv_AidaItems.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
             this.dgv_AidaItems.Location = new System.Drawing.Point(12, 27);
             this.dgv_AidaItems.Name = "dgv_AidaItems";
-            this.dgv_AidaItems.Size = new System.Drawing.Size(577, 398);
+            this.dgv_AidaItems.Size = new System.Drawing.Size(560, 209);
             this.dgv_AidaItems.TabIndex = 4;
-            // 
-            // zeigeLetzeAIDAAntwortRAWAnToolStripMenuItem
-            // 
-            this.zeigeLetzeAIDAAntwortRAWAnToolStripMenuItem.Name = "zeigeLetzeAIDAAntwortRAWAnToolStripMenuItem";
-            this.zeigeLetzeAIDAAntwortRAWAnToolStripMenuItem.Size = new System.Drawing.Size(261, 22);
-            this.zeigeLetzeAIDAAntwortRAWAnToolStripMenuItem.Text = "Zeige letze AIDA-Antwort RAW an...";
-            this.zeigeLetzeAIDAAntwortRAWAnToolStripMenuItem.Click += new System.EventHandler(this.zeigeLetzeAIDAAntwortRAWAnToolStripMenuItem_Click);
             // 
             // Form1
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(601, 450);
+            this.ClientSize = new System.Drawing.Size(584, 261);
             this.Controls.Add(this.dgv_AidaItems);
             this.Controls.Add(this.statusStrip1);
             this.Controls.Add(this.menuStrip1);
+            this.MinimumSize = new System.Drawing.Size(500, 300);
             this.Name = "Form1";
             this.Text = "AIDA64 to TCP/IP Client";
             this.FormClosing += new System.Windows.Forms.FormClosingEventHandler(this.Form1_FormClosing);

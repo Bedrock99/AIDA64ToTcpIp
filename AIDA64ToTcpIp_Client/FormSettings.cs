@@ -101,8 +101,27 @@ namespace AIDA64ToTcpIp_Client
         private void AddAidaItem(CAidaIdData data_)
         {
             UCAidaIdData ucData = new UCAidaIdData(data_);
+            ucData.Margin = new Padding(0, 0, 0, 0);
+            ucData.Padding = new Padding(0, 0, 0, 0);
+            ucData.Width = flp_AidaItems.Width - 20;
             ucData.DeletePressed += UcData_DeletePressed;
             flp_AidaItems.Controls.Add(ucData);
+        }
+
+        #endregion
+
+        #region --- Resize ---
+
+        private void flp_AidaItems_Resize(object sender, EventArgs e)
+        {
+            timerResize.Stop();
+            timerResize.Start();
+        }
+
+        private void timerResize_Tick(object sender, EventArgs e)
+        {
+            foreach (Control c in flp_AidaItems.Controls)
+                c.Width = flp_AidaItems.Width - 20;
         }
 
         #endregion
